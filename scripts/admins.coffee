@@ -38,6 +38,6 @@ module.exports = (robot) ->
 
       # response_info = ''
       msgConcat = (admin) ->
-        "#{admin[0]}: #{admin[1]} is " + (if admin[2] then '' else 'not ') + "online\n"
+        "#{admin[0]}: #{admin[1]} is " + (if admin[2] then '' else 'not ') + "online"
 
-      res.send (msgConcat(admin) for admin in admins).toString()
+      res.send (msgConcat(admin) for admin in admins).join('\n')
